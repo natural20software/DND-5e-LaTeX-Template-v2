@@ -1,0 +1,141 @@
+\documentclass[letterpaper,twocolumn,openany]{dndarticle}
+
+% Use babel or polyglossia to automatically redefine macros for terms
+% Armor Class, Level, etc...
+% Default output is in English; captions are located in lib/dndstring-captions.sty.
+% If no captions exist for a language, English will be used.
+%1. To load a language with babel:
+%	\usepackage[<lang>]{babel}
+%2. To load a language with polyglossia:
+%	\usepackage{polyglossia}
+%	\setdefaultlanguage{<lang>}
+\usepackage[english]{babel}
+%\usepackage[italian]{babel}
+% For further options (multilanguage documents, hypenations, language environments...)
+% please refer to babel/polyglossia's documentation.
+
+\usepackage[utf8]{inputenc}
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{shortvrb}
+\usepackage{stfloats}
+\usepackage{graphicx}
+\usepackage{titling}
+\usetikzlibrary{intersections} % Required for ornamentedtabular
+
+\captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
+\DndSetThemeColor[DmgLavender]
+
+% Override the default background "paper" image with an alternate one.
+\SetPaperImage{img/paper-article}
+
+% The settings below are an example of how to modify all of the theme colors.
+% Note that the paper (\SetPaperImage) and footerscroll.pdf will probably need
+% to be modified for any major color scheme change. The values below are
+% thematic for a sourcebook like GoS.
+\definecolor {mytheme}      {HTML} {DCF1E5} %
+\definecolor {mycomment}    {HTML} {E9F5F5} %
+\definecolor {mysidebar}    {HTML} {E9F5F5} %
+\definecolor {myreadaloud}  {HTML} {DCF1E5} %
+\definecolor {myreadaloudborder}  {HTML} {8AA7A2} %
+\definecolor {mypagenum}  {HTML} {B5D4CF} %
+%\DndSetComplexThemeColor[mytheme][mycomment][mysidebar][myreadaloud][myreadaloudborder][titlered][titlegold][mypagenum]
+
+\MakeShortVerb{|}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+  breaklines=true,
+}
+
+
+
+
+\font\quipfont=cmr7 at 8pt
+\title{The Sunken Temple of the Forgotten God}
+
+\date{{\quipfont \small\textit{}}}
+
+% Adds an article image at the top of column 1 above the title, similar to the
+% "Dungeon"-style article. Comment out the below to remove the image.
+\pretitle{
+  \Huge
+  \vspace{-30pt} % Align top of image with column 2.
+  \centering{\includegraphics[width=7cm,height=7cm]{img/title.jpg}\\[\bigskipamount]}
+  \begin{center}
+}
+\posttitle{\end{center}}
+
+\begin{document}
+
+\maketitle
+
+\DndDropCapLine{T}{he dungeon is a submerged temple} dedicated to a long-forgotten aquatic deity. It was once a place of worship for a now-extinct civilization. The dungeon is filled with ancient murals and statues, depicting the rituals and ceremonies that once took place in its depths.
+
+\section{Rooms}
+
+
+\DndArea{The Guardian}
+Upon entering the temple, the party encounters the guardian, an enchanted Water Weird that emerges from a central pool in the room. The Water Weird is bound to a statue of the Forgotten God and will attack any intruders it perceives as a threat. The players must figure out how to pacify the Water Weird, either by deciphering ancient inscriptions, offering a tribute, or using a magical item they've brought along.
+
+\DndArea{The Puzzle}
+The second room is a chamber filled with a series of underwater, pressure-sensitive tiles. The tiles form an intricate mural depicting the history of the Forgotten God. The players must solve the puzzle by stepping on the tiles in a specific order, according to the story depicted in the mural. Failure to do so causes jets of high-pressure water to shoot from the walls, potentially knocking players into each other or into the surrounding water.
+
+\DndArea{The Humorous Twist}
+The third room features a comically oversized, sentient sea sponge named Spongy Bob, who speaks in an exaggerated accent. Spongy Bob was once a worshiper of the Forgotten God and has been waiting for someone to come and free him from his curse. He's been in the temple for so long that his memory is a bit fuzzy, and he may accidentally give the players misleading or contradictory information about the temple's history and dangers. The players must navigate his unreliable advice while laughing at his antics.
+
+\letteredarea{The Memorable Battle}
+
+\letteredsubarea{The Boss}
+The boss of this room is a massive, mutated sahuagin named Ssra'xix, the Prophet of the Abyss. They believe they've been chosen by the Forgotten God to bring about the deity's return
+\letteredsubarea{The battle}
+The battle takes place in a large chamber with a deep central pool. Ssra'xix can summon whirlpools and control the water to create waves, making the terrain difficult for the players. Additionally, Ssra'xix can summon smaller sahuagin minions to aid in the fight.
+\letteredsubarea{The end}
+As Ssra'xix dies, they say
+\begin{DndReadAloud}
+ Foolish mortals, you cannot stop the return of the Forgotten God. The depths shall rise and consume you all!
+\end{DndReadAloud}
+
+\DndArea{The Treasure and Final Twist}
+The final chamber holds a priceless treasure: a magical trident that belonged to the high priest of the Forgotten God. As the players claim the treasure, they also discover a hidden chamber containing a massive, ancient scroll. The scroll reveals that the Forgotten God was not an evil deity, but one that maintained balance between the land and sea. However, a dark force is now trying to use the Forgotten God's power to bring about destruction. The players must decide whether to take up the mantle of the Forgotten God's champions or risk unleashing a powerful force that could destroy the world.
+
+
+
+\section{Villian Backstory}
+Ssra'xix was once an ordinary sahuagin, living in a remote underwater settlement deep in the ocean. His people had heard whispers of the ancient deity Thalassarion, the Tide Shaper, but over time, the stories had become little more than legends. Ssra'xix was a curious and ambitious individual, spending countless hours studying ancient texts and scrolls, attempting to unravel the mysteries of the Forgotten God.
+
+One fateful day, while exploring a treacherous underwater cavern, Ssra'xix discovered the entrance to the Sunken Temple of Thalassarion. Enthralled by the power emanating from the temple, he ventured inside, only to find himself face-to-face with a dark entity lurking in the shadows. This malevolent force, known as Kralkatorrik the Abyssal, sensed Ssra'xix's hunger for power and knowledge and decided to exploit it. Kralkatorrik corrupted Ssra'xix's mind, twisting his perception of Thalassarion's purpose and legacy.
+
+Believing he had been chosen by Thalassarion, Ssra'xix was convinced that the Forgotten God desired the destruction of the surface world to restore the primacy of the oceans. In reality, this was Kralkatorrik's aim, who sought to bring chaos and destruction to the world. Ssra'xix's motivation became the fulfillment of what he believed to be Thalassarion's will, as he saw the surface-dwellers as a threat to the natural balance of the world.
+
+Ssra'xix returned to his people, preaching the return of Thalassarion and urging them to aid in the destruction of the surface world. With the power bestowed upon him by Kralkatorrik, Ssra'xix grew in strength, mutating into a formidable force. Gathering a group of devoted followers, he took control of the Sunken Temple, determined to awaken Thalassarion and unleash the deity's wrath upon the world.
+
+Unbeknownst to Ssra'xix, he had become a pawn in Kralkatorrik's sinister plans, and his actions would ultimately lead to even greater chaos and imbalance between the land and sea if left unchecked.
+
+\newpage
+
+\section{Hooks and Rumors}
+A recent earthquake has revealed a hidden underwater passage that leads to a long-lost temple.
+\begin{DndReadAloud}
+You know, I heard from a fisherman that a recent earthquake opened up a hidden passage underwater. Says it leads to some ancient temple. I reckon it could be filled with unimaginable treasures, but you'd have to be brave or foolish enough to venture into the depths.
+\end{DndReadAloud}
+
+Strange aquatic creatures have been sighted near the coast, and they appear to be guarding something.
+\begin{DndReadAloud}
+A friend of mine was out sailing the other day when he spotted some bizarre fish-people, like nothing he'd ever seen before. They seemed to be guarding some kind of entrance in the sea. I've got a feeling there's something valuable down there, but who knows what dangers lurk beneath the waves?
+\end{DndReadAloud}
+
+A magical trident, said to have belonged to a powerful high priest of a forgotten deity, is rumored to be hidden in an underwater temple.
+\begin{DndReadAloud}
+A traveling bard came through town recently, singing tales of a magical trident that once belonged to a high priest of a long-forgotten god. They say it's hidden in a submerged temple, waiting for a worthy adventurer to claim it. If you're interested in that kind of thing, maybe you should look into it. Just be careful; ancient places like that tend to have a few surprises.
+\end{DndReadAloud}
+
+
+
+\subsection{Additional Info}
+The Forgotten God's original name was Thalassarion, the Tide Shaper. Thalassarion was a deity of balance, revered for their ability to control the ebb and flow of the seas, ensuring harmony between the aquatic realms and the land-dwelling civilizations.
+
+
+\end{document}
